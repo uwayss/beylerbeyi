@@ -46,12 +46,26 @@ export type MediaSectionContent = {
   callout: string
 }
 
+export type CarouselSlide = {
+  title: string
+  description: string
+  image: string
+  tag?: string
+}
+
+export type CarouselContent = {
+  heading: string
+  intro: string
+  slides: CarouselSlide[]
+}
+
 export type PageContent = {
   hero: HeroContent
   parallaxSections: ParallaxSectionContent[]
   timeline: TimelineEntry[]
   quote: QuoteContent
   media: MediaSectionContent
+  carousel: CarouselContent
   closingNote: {
     heading: string
     body: string
@@ -98,6 +112,30 @@ export const beylerbeyiContent: PageContent = {
         { label: 'Mimari Üslup', value: 'Neobarok & Ampir' },
         { label: 'İnşa', value: '1861 - 1865' },
         { label: 'Mimar', value: 'Sarkis Balyan' },
+      ],
+    },
+    {
+      id: 'craftsmanship',
+      eyebrow: 'Atlantik’ten Gelen Esintiler',
+      heading: 'İtalyan mermer ustalarıyla Kafkas oymacıların ortak dili',
+      body:
+        'Tavanlardaki altın varak süslemeler Roma atölyelerinde hazırlanırken duvar panellerindeki geometrik desenler Üsküdar’daki ahşap ustalarının imzasını taşıyor.',
+      imageLayers: [
+        {
+          src: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80',
+          alt: 'Gilded ceiling detail',
+          speed: 9,
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1300&q=80',
+          alt: 'Artisan carving patterns',
+          speed: 17,
+        },
+      ],
+      factoids: [
+        { label: 'Varak', value: '24 ayar yaldız' },
+        { label: 'Zemin', value: 'Marmara mermeri' },
+        { label: 'Usta', value: 'Balyan ailesi atölyesi' },
       ],
     },
     {
@@ -148,7 +186,59 @@ export const beylerbeyiContent: PageContent = {
         { label: 'Sulama', value: 'Boğaz’dan çekilen tatlı su' },
       ],
     },
+    {
+      id: 'ceremony',
+      eyebrow: 'Diplomasi Sahnesi',
+      heading: 'Saray salonları beş dakikalık sunumunuz için hazır koreografi',
+      body:
+        'Devlet konukları için düzenlenen akşam yemekleri 12 tabaklı servis, Boğaz manzarası ve saray bandosunun seçkisiyle tamamlanıyordu. Sunumda bu ritüelleri anlatırken görselleri kolayca değiştirin.',
+      imageLayers: [
+        {
+          src: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80',
+          alt: 'Evening lights on the Bosphorus',
+          speed: 11,
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1500&q=80',
+          alt: 'Decorated banquet hall',
+          speed: 19,
+        },
+      ],
+      factoids: [
+        { label: 'Protokol', value: '150 kişilik davet' },
+        { label: 'Müzik', value: 'Mızıka-i Hümayun' },
+        { label: 'Son Misafir', value: 'Reza Şah Pehlevi' },
+      ],
+    },
   ],
+  carousel: {
+    heading: 'Beylerbeyi sahneleri arasında gezinin',
+    intro:
+      'Her kart, sunum sırasında duraklayabileceğiniz kısa bir an. Görselleri kendi 4K karelerinizle değiştirin; metinler sadece fikir vermek için burada.',
+    slides: [
+      {
+        title: 'Tünel Girişi',
+        description: 'Sarayın bodrum geçitleri yaz aylarında buz mahzeni olarak kullanılıyordu.',
+        image:
+          'https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1200&q=80',
+        tag: 'Alt Kat',
+      },
+      {
+        title: 'Harem Şadırvanı',
+        description: 'Yazlık planın kalbinde, mermer havuzdan yükselen serinlik anlatınızı desteklesin.',
+        image:
+          'https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1200&q=80',
+        tag: 'Serinlik',
+      },
+      {
+        title: 'Rıhtım Saati',
+        description: 'Fransız imalatı saatler Boğaz kıyısındaki bekleme salonlarında hâlâ çalışıyor.',
+        image:
+          'https://images.unsplash.com/photo-1494783367193-149034c05e8f?auto=format&fit=crop&w=1200&q=80',
+        tag: 'Detay',
+      },
+    ],
+  },
   timeline: [
     {
       year: '1829',
