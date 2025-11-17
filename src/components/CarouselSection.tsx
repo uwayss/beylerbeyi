@@ -1,32 +1,40 @@
-import { useEffect, useState } from 'react'
-import clsx from 'clsx'
-import type { CarouselContent } from '../content/sections'
+import { useEffect, useRef, useState } from "react";
+import clsx from "clsx";
+import type { CarouselContent } from "../content/sections";
 
 type CarouselSectionProps = {
-  content: CarouselContent
-}
+  content: CarouselContent;
+};
 
 export const CarouselSection = ({ content }: CarouselSectionProps) => {
-  const [index, setIndex] = useState(0)
-  const slides = content.slides
-  const slideCount = slides.length
+  const [index, setIndex] = useState(0);
+  const slides = content.slides;
+  const slideCount = slides.length;
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
+  // Control video playback based on active slide
   useEffect(() => {
-    if (slideCount <= 1) return
-    const timer = window.setInterval(() => {
-      setIndex((prev) => (prev + 1) % slideCount)
-    }, 6000)
-    return () => window.clearInterval(timer)
-  }, [slideCount])
+    videoRefs.current.forEach((video, i) => {
+      if (video) {
+        if (i === index) {
+          video.play().catch(() => {
+            // Ignore play errors (e.g., autoplay policy restrictions)
+          });
+        } else {
+          video.pause();
+        }
+      }
+    });
+  }, [index]);
 
   const go = (direction: number) => {
     setIndex((prev) => {
-      const next = prev + direction
-      if (next < 0) return slideCount - 1
-      if (next >= slideCount) return 0
-      return next
-    })
-  }
+      const next = prev + direction;
+      if (next < 0) return slideCount - 1;
+      if (next >= slideCount) return 0;
+      return next;
+    });
+  };
 
   return (
     <section className="section carousel">
@@ -35,10 +43,18 @@ export const CarouselSection = ({ content }: CarouselSectionProps) => {
         <h2>{content.heading}</h2>
         <p>{content.intro}</p>
         <div className="carousel__controls">
-          <button type="button" onClick={() => go(-1)} aria-label="Önceki slayt">
+          <button
+            type="button"
+            onClick={() => go(-1)}
+            aria-label="Önceki slayt"
+          >
             &lt;
           </button>
-          <button type="button" onClick={() => go(1)} aria-label="Sonraki slayt">
+          <button
+            type="button"
+            onClick={() => go(1)}
+            aria-label="Sonraki slayt"
+          >
             &gt;
           </button>
         </div>
@@ -59,9 +75,23 @@ export const CarouselSection = ({ content }: CarouselSectionProps) => {
         {slides.map((slide, slideIndex) => (
           <article
             key={slide.title}
-            className={clsx('carousel__card', { active: slideIndex === index })}
+            className={clsx("carousel__card", { active: slideIndex === index })}
           >
-            <img src={slide.image} alt={slide.title} />
+            {slide.video ? (
+              <video
+                ref={(el) => {
+                  videoRefs.current[slideIndex] = el;
+                }}
+                src={slide.video}
+                poster={slide.poster || slide.image}
+                muted
+                loop
+                playsInline
+                className="carousel__video"
+              />
+            ) : (
+              slide.image && <img src={slide.image} alt={slide.title} />
+            )}
             <div className="carousel__card-body">
               {slide.tag ? <span className="tag">{slide.tag}</span> : null}
               <h3>{slide.title}</h3>
@@ -71,6 +101,5 @@ export const CarouselSection = ({ content }: CarouselSectionProps) => {
         ))}
       </div>
     </section>
-  )
-}
-
+  );
+};

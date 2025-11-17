@@ -1,8 +1,19 @@
+import kapiVideo from '../assets/kapi1.mp4'
+import denizVideo from '../assets/deniz.mp4'
+import heykelVideo from '../assets/heykel.mp4'
+import firstPhoto from '../assets/pic1.jpg'
+import kacakVideo from '../assets/kacak.mp4'
+import lakePhoto from '../assets/pic2.jpeg'
+import bambuVideo from "../assets/bambu.mp4"
+import bahcaVideo from '../assets/bahcaaa.mp4'
+
 export type ImageLayer = {
-  src: string
+  src?: string // Image URL or fallback/poster for video (optional if video is provided)
   alt: string
   speed?: number
   credit?: string
+  video?: string // Optional video URL - if provided, video will be used instead of image
+  poster?: string // Optional poster image for video (falls back to src if not provided)
 }
 
 export type HeroContent = {
@@ -11,7 +22,9 @@ export type HeroContent = {
   description: string
   ctas: { label: string; href: string }[]
   background: {
-    image: string
+    image?: string
+    video?: string // Optional video URL - if provided, video will be used instead of image
+    poster?: string // Optional poster image for video
     overlayColor?: string
     overlayOpacity?: number
   }
@@ -40,16 +53,18 @@ export type QuoteContent = {
 
 export type MediaSectionContent = {
   heading: string
-  description: string
+  description?: string
   videoUrl: string
-  posterUrl: string
+  posterUrl?: string
   callout: string
 }
 
 export type CarouselSlide = {
   title: string
   description: string
-  image: string
+  image?: string // Optional fallback/poster for video
+  video?: string // Optional video URL - if provided, video will be used instead of image
+  poster?: string // Optional poster image for video (falls back to image if not provided)
   tag?: string
 }
 
@@ -79,12 +94,13 @@ export const beylerbeyiContent: PageContent = {
     description:
       '19. yüzyılda Osmanlı diplomasi sahnesinin gözdesi olan saray, deniz esintisiyle karışan kristal avizeleri ve egzotik bahçeleriyle hâlâ nefes kesiyor.',
     ctas: [
-      { label: 'Scroll & Discover', href: '#story' },
-      { label: 'Plan Your Visit', href: 'https://muze.gov.tr/' },
+      // { label: 'Scroll & Discover', href: '#story' },
+      // { label: 'Plan Your Visit', href: 'https://muze.gov.tr/' },
     ],
     background: {
-      image:
-        'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80',
+      // image:
+      //   'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80',
+      video: kapiVideo,
       overlayColor: '#020817',
       overlayOpacity: 0.45,
     },
@@ -98,14 +114,8 @@ export const beylerbeyiContent: PageContent = {
         'Sarayın denize açılan rıhtımı, misafirleri sandallarla karşılayarak daha ilk anda teatral bir etki yaratırdı. Zemin katın yazlık planı, serin kuzey rüzgârlarını içeri davet eder.',
       imageLayers: [
         {
-          src: 'https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1600&q=80',
+          video: denizVideo,
           alt: 'Bosphorus waters at dusk',
-          speed: 8,
-        },
-        {
-          src: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80',
-          alt: 'Palace facade close-up',
-          speed: 16,
         },
       ],
       factoids: [
@@ -122,14 +132,8 @@ export const beylerbeyiContent: PageContent = {
         'Tavanlardaki altın varak süslemeler Roma atölyelerinde hazırlanırken duvar panellerindeki geometrik desenler Üsküdar’daki ahşap ustalarının imzasını taşıyor.',
       imageLayers: [
         {
-          src: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80',
-          alt: 'Gilded ceiling detail',
-          speed: 9,
-        },
-        {
-          src: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1300&q=80',
-          alt: 'Artisan carving patterns',
-          speed: 17,
+          video: heykelVideo,
+          alt: 'Heykel videosu',
         },
       ],
       factoids: [
@@ -140,101 +144,44 @@ export const beylerbeyiContent: PageContent = {
     },
     {
       id: 'interiors',
-      eyebrow: 'İçerideki Serinlik',
-      heading: 'Kristal avizeler ve bambu mobilyalar yan yana',
+      eyebrow: 'Disarisi',
+      heading: 'Bambu bahcesi',
       body:
-        'Çin porseleni vazolar, Fransız saatleri, Mısır’dan gelen bambu oturma grupları… Sarayın salonları, Avrupa’nın modernliğiyle Doğu’nun konforunu aynı mekânda buluşturuyor.',
+        'Biraz alakasiz buldum. Girmedim',
       imageLayers: [
         {
-          src: 'https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1600&q=80',
+          video:bambuVideo,
           alt: 'Interior chandeliers',
           speed: 10,
         },
-        {
-          src: 'https://images.unsplash.com/photo-1494783367193-149034c05e8f?auto=format&fit=crop&w=1200&q=80',
-          alt: 'Marble staircase details',
-          speed: 20,
-        },
       ],
       factoids: [
-        { label: 'Mekân', value: 'Mermer Salonu' },
-        { label: 'İklim', value: 'Doğal klima etkisi' },
-        { label: 'Konuk', value: 'II. Napolyon’un eşi Eugénie' },
-      ],
-    },
-    {
-      id: 'gardens',
-      eyebrow: 'Yamaçtaki Botanik',
-      heading: 'Terraslar, selvi gölgeleri ve egzotik kuş sesleri',
-      body:
-        'Yamaç bahçeleri kademeli olarak yükselirken her terasta farklı kokularla tanışılıyor. Sarayın hayvanat bahçesi egzotik kuşlarla ün salmıştı.',
-      imageLayers: [
-        {
-          src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
-          alt: 'Garden pathway',
-          speed: 7,
-        },
-        {
-          src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=80',
-          alt: 'Sunlit trees',
-          speed: 18,
-        },
-      ],
-      factoids: [
-        { label: 'Terraza', value: '3 kademeli plan' },
-        { label: 'Hayvanat Bahçesi', value: 'Tavus kuşları & Papağanlar' },
-        { label: 'Sulama', value: 'Boğaz’dan çekilen tatlı su' },
-      ],
-    },
-    {
-      id: 'ceremony',
-      eyebrow: 'Diplomasi Sahnesi',
-      heading: 'Saray salonları beş dakikalık sunumunuz için hazır koreografi',
-      body:
-        'Devlet konukları için düzenlenen akşam yemekleri 12 tabaklı servis, Boğaz manzarası ve saray bandosunun seçkisiyle tamamlanıyordu. Sunumda bu ritüelleri anlatırken görselleri kolayca değiştirin.',
-      imageLayers: [
-        {
-          src: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80',
-          alt: 'Evening lights on the Bosphorus',
-          speed: 11,
-        },
-        {
-          src: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1500&q=80',
-          alt: 'Decorated banquet hall',
-          speed: 19,
-        },
-      ],
-      factoids: [
-        { label: 'Protokol', value: '150 kişilik davet' },
-        { label: 'Müzik', value: 'Mızıka-i Hümayun' },
-        { label: 'Son Misafir', value: 'Reza Şah Pehlevi' },
+        { label: 'Mekân', value: 'Bambu Bahcesi' },
+        { label: 'Neden', value: 'Padisah seviyormus' },
       ],
     },
   ],
   carousel: {
-    heading: 'Beylerbeyi sahneleri arasında gezinin',
+    heading: 'Bazi Guzel Kareler',
     intro:
-      'Her kart, sunum sırasında duraklayabileceğiniz kısa bir an. Görselleri kendi 4K karelerinizle değiştirin; metinler sadece fikir vermek için burada.',
+      'Bazi anlik kareler',
     slides: [
       {
-        title: 'Tünel Girişi',
-        description: 'Sarayın bodrum geçitleri yaz aylarında buz mahzeni olarak kullanılıyordu.',
-        image:
-          'https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1200&q=80',
-        tag: 'Alt Kat',
+        title: 'Dış Mimari',
+        image: firstPhoto,
+        description: 'Detaylara bayıldım',
+        tag: 'Dış Mimari',
       },
       {
-        title: 'Harem Şadırvanı',
-        description: 'Yazlık planın kalbinde, mermer havuzdan yükselen serinlik anlatınızı desteklesin.',
-        image:
-          'https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1200&q=80',
+        title: 'Ilk kacak cekim tecrubem',
+        description: 'Caktirmadan avizeleri cekmeye calistim',
+        video: kacakVideo,
         tag: 'Serinlik',
       },
       {
-        title: 'Rıhtım Saati',
-        description: 'Fransız imalatı saatler Boğaz kıyısındaki bekleme salonlarında hâlâ çalışıyor.',
-        image:
-          'https://images.unsplash.com/photo-1494783367193-149034c05e8f?auto=format&fit=crop&w=1200&q=80',
+        title: 'Gol',
+        description: 'Cicekleri begendim. Ama koparamadim :*(',
+        image: lakePhoto,
         tag: 'Detay',
       },
     ],
@@ -268,18 +215,14 @@ export const beylerbeyiContent: PageContent = {
     context: '1869 İstanbul seyahatnamesi',
   },
   media: {
-    heading: 'Sarayın ritmi: dalga, rüzgâr, kristal',
-    description:
-      'Kısa bir video döngüsü, deniz yüzeyiyle iç mekândaki ışığın titreşimini buluşturuyor. Kendi 4K çekimlerinizi buraya koyduğunuzda, sunum boyunca arka planda akıcı bir atmosfer oluşur.',
-    videoUrl: 'https://cdn.coverr.co/videos/coverr-istanbul-bridge-5945/1080p.mp4',
-    posterUrl:
-      'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80',
-    callout: 'Videoyu kendi çekimlerinizle değiştirin; aynı oranı koruyun.',
+    heading: 'Sarayın ritmi: Dalgalar ve rüzgârlar...',
+    videoUrl: bahcaVideo,
+    callout: 'Burayi degistir!!',
   },
   closingNote: {
-    heading: 'Sunumunuzu kişiselleştirin',
+    heading: 'Dinlediginiz icin tesekkur ederim 🙏🙏🫶',
     body:
-      'Metinleri, görselleri ve animasyon hızlarını `src/content/sections.ts` dosyasından değiştirerek kendi anlatınızı oluşturabilirsiniz. Her bölüm, tek bir obje olarak düzenlendiği için değişiklikler saniyeler içinde devreye girer.',
+      'Evet simdi editorune de tesekkur et!',
   },
 }
 
