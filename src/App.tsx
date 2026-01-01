@@ -5,6 +5,7 @@ import { TimelineRail } from './components/TimelineRail'
 import { QuoteBlock } from './components/QuoteBlock'
 import { MediaReveal } from './components/MediaReveal'
 import { CarouselSection } from './components/CarouselSection'
+import { ClosingSection } from './components/ClosingSection'
 import type { Section } from './types/content'
 
 const SectionRenderer = ({ section }: { section: Section }) => {
@@ -22,12 +23,7 @@ const SectionRenderer = ({ section }: { section: Section }) => {
     case 'carousel':
       return <CarouselSection content={section} />
     case 'closing':
-      return (
-        <section className="section closing">
-          <h2>{section.heading}</h2>
-          <p>{section.body}</p>
-        </section>
-      )
+      return <ClosingSection content={section} />
     default:
       return null
   }

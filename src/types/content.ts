@@ -42,6 +42,8 @@ export type TimelineContent = {
   type: 'timeline'
   heading: string
   description?: string
+  imageLayers?: ImageLayer[]
+  entriesOpacity?: number
   entries: TimelineEntry[]
 }
 
@@ -50,15 +52,17 @@ export type QuoteContent = {
   quote: string
   speaker: string
   context: string
+  imageLayers?: ImageLayer[]
 }
 
 export type MediaSectionContent = {
   type: 'media'
   heading: string
   description?: string
-  videoUrl: string
+  videoUrl?: string
   posterUrl?: string
   callout: string
+  imageLayers?: ImageLayer[]
 }
 
 export type CarouselSlide = {
@@ -81,6 +85,7 @@ export type ClosingNoteContent = {
   type: 'closing'
   heading: string
   body: string
+  imageLayers?: ImageLayer[]
 }
 
 export type Section = 
