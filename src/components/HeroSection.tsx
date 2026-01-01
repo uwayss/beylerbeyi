@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import clsx from "clsx";
-import type { HeroContent } from "../content/sections";
+import type { HeroContent } from "../types/content";
 import { useParallax } from "../hooks/useParallax";
 
 type HeroSectionProps = {

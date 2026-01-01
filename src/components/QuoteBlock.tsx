@@ -1,4 +1,4 @@
-import type { QuoteContent } from '../content/sections'
+import type { QuoteContent } from '../types/content'
 
 type QuoteBlockProps = {
   content: QuoteContent

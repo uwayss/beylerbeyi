@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Project specific
+src/content/sections.ts
+public/assets/
+src/content/config.ts

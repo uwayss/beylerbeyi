@@ -1,19 +1,17 @@
-import type { TimelineEntry } from '../content/sections'
+import type { TimelineContent } from '../types/content'
 
 type TimelineRailProps = {
-  entries: TimelineEntry[]
+  content: TimelineContent
 }
 
-export const TimelineRail = ({ entries }: TimelineRailProps) => {
+export const TimelineRail = ({ content }: TimelineRailProps) => {
+  const { entries, heading, description } = content;
   return (
     <section className="section timeline">
       <div className="timeline__header">
         <p className="eyebrow">Zaman Çizgisi</p>
-        <h2>Beylerbeyi Sarayı nasıl bugünkü hâline geldi?</h2>
-        <p>
-          Aşağıdaki istasyonlar sunum sırasında hikâyeyi 5 dakikaya yaymanız için hazırlandı. İstediğiniz
-          kadar detay ekleyebilir ya da çıkarabilirsiniz.
-        </p>
+        <h2>{heading}</h2>
+        {description && <p>{description}</p>}
       </div>
       <div className="timeline__rail">
         {entries.map((entry) => (

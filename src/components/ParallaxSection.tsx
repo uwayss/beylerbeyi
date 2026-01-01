@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import type { ImageLayer, ParallaxSectionContent } from '../content/sections'
+import type { ImageLayer, ParallaxSectionContent } from '../types/content'
 import { useParallax } from '../hooks/useParallax'
 
 const ParallaxLayer = ({ layer }: { layer: ImageLayer }) => {

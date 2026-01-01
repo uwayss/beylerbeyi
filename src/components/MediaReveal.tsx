@@ -1,4 +1,4 @@
-import type { MediaSectionContent } from '../content/sections'
+import type { MediaSectionContent } from '../types/content'
 
 type MediaRevealProps = {
   content: MediaSectionContent

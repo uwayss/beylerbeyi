@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
-import type { CarouselContent } from "../content/sections";
+import type { CarouselContent } from "../types/content";
 
 type CarouselSectionProps = {
   content: CarouselContent;
