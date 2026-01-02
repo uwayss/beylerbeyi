@@ -490,7 +490,7 @@ button:hover {
 
 .closing {
   text-align: center;
-  padding-bottom: clamp(5rem, 8vw, 8rem);
+  padding-bottom: 0;
   isolation: isolate;
 }
 
@@ -503,6 +503,78 @@ button:hover {
 
 .closing h2 {
   font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 0.25rem;
+}
+
+.closing p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.credits-container {
+  margin: 1.5rem auto 0;
+  height: 45vh;
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  position: relative;
+  perspective: 1200px;
+  /* Cinematic fade effect */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+.credits-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 10 0;
+  animation: credits-roll 20s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes credits-roll {
+  0% {
+    transform: translateY(0) rotateX(4deg);
+  }
+  100% {
+    transform: translateY(-50%) rotateX(4deg);
+  }
+}
+
+.credit-item {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  backface-visibility: hidden;
+}
+
+.credit-role {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.credit-name {
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.1;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
 }
 
 .sr-only {

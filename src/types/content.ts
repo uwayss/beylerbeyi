@@ -86,6 +86,10 @@ export type ClosingNoteContent = {
   heading: string
   body: string
   imageLayers?: ImageLayer[]
+  credits?: {
+    role: string
+    names: string[]
+  }[]
 }
 
 export type Section = 

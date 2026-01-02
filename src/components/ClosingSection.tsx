@@ -6,7 +6,7 @@ type ClosingSectionProps = {
 }
 
 export const ClosingSection = ({ content }: ClosingSectionProps) => {
-  const { heading, body, imageLayers } = content;
+  const { heading, body, imageLayers, credits } = content;
   return (
     <section className="section closing">
       {imageLayers && imageLayers.length > 0 && (
@@ -16,8 +16,25 @@ export const ClosingSection = ({ content }: ClosingSectionProps) => {
           ))}
         </div>
       )}
-      <h2>{heading}</h2>
-      <p>{body}</p>
+      <div className="closing__content">
+        <h2>{heading}</h2>
+        <p>{body}</p>
+
+        {credits && credits.length > 0 && (
+          <div className="credits-container">
+            <div className="credits-scroll">
+              {[...credits, ...credits].map((credit, idx) => (
+                <div key={idx} className="credit-item">
+                  <span className="credit-role">{credit.role}</span>
+                  {credit.names.map((name, nIdx) => (
+                    <span key={nIdx} className="credit-name">{name}</span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </section>
   )
 }

@@ -228,6 +228,31 @@ const exampleConfig: PageConfig = {
           alt: 'Quote',
         },
       ],
+      credits: [
+        {
+          role: 'Proje Hazırlama',
+          names: ['Uwayss Antar', 'Youssef Awal'],
+        },
+        {
+          role: 'Araştırma',
+          names: ['Youssef Awal'],
+        },
+        {
+          role: 'Tasarım ve Geliştirme',
+          names: ['Uwayss Antar'],
+        },
+        {
+          role: 'Kaynaklar',
+          names: ['Vikipedi',
+             'TDV İslâm Ansiklopedisi', 
+             'MEB Kitabı'
+          ],
+        },
+        {
+          role: 'Özel Teşekkür',
+          names: ['Birsen hocamiz ve tum dinleyenler'],
+        },
+      ],
     },
   ],
 };
