@@ -6,4 +6,4 @@ It's name comes from the first presentation I made which was about the Beylerbey
 It went perfect and I got a lot of applause, so I kept the name like that. You can checkout to the last commit on November 17th to see that presentation
 
 # Contribution
-Wanna make my presentations even cooler? Man that's awesome! All help is appreciated 🙏🙏
+Wanna help make my presentations even cooler? Man that's awesome! All help is appreciated 🙏🙏
