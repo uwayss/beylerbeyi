@@ -102,46 +102,6 @@ const romanticPeriodConfig: PageConfig = {
         "Küçük bir piyano parçası da, yüz kişilik orkestra da aynı dönemin duygusal dilini taşır.",
     },
     {
-      type: "gallery",
-      heading: "Romantik Dönem Görsel Panosu",
-      description:
-        "Mekân, kostüm, partisyon ve sahne estetiğini tek bakışta gören bir medya kolajı.",
-      items: [
-        {
-          kind: "image",
-          src: "/assets/romantik/gallery/salon-1.jpg",
-          alt: "19. yüzyıl salonu",
-          caption: "Paris salon kültürü",
-        },
-        {
-          kind: "video",
-          src: "/assets/romantik/gallery/conductor.mp4",
-          poster: "/assets/romantik/gallery/conductor-poster.jpg",
-          alt: "Orkestra şefi",
-          caption: "Dev orkestra yönetimi",
-        },
-        {
-          kind: "image",
-          src: "/assets/romantik/gallery/score.jpg",
-          alt: "El yazması nota",
-          caption: "El yazması partisyonlar",
-        },
-        {
-          kind: "image",
-          src: "/assets/romantik/gallery/opera-stage.jpg",
-          alt: "Opera sahnesi",
-          caption: "Wagner sonrası sahne tasarımı",
-        },
-        {
-          kind: "video",
-          src: "/assets/romantik/gallery/piano-hands.mp4",
-          poster: "/assets/romantik/gallery/piano-hands-poster.jpg",
-          alt: "Piyano çalan eller",
-          caption: "Virtüöz teknik",
-        },
-      ],
-    },
-    {
       type: "timeline",
       heading: "Romantik Dönemin Dönüm Noktaları",
       description:
@@ -187,68 +147,13 @@ const romanticPeriodConfig: PageConfig = {
       ],
     },
     {
-      type: "media",
-      heading: "Orkestradaki Ses Patlaması",
-      description:
-        "Geniş dinamik aralık ve yoğun orkestrasyon romantik dönemin en güçlü işitsel imzasıdır.",
-      videoUrl: "/assets/romantik/orchestra-impact.mp4",
-      posterUrl: "/assets/romantik/orchestra-impact-poster.jpg",
-      callout:
-        "Kritik not: ppp den fff ye çıkan dramatik geçişler bu dönemde belirginleşir.",
-      imageLayers: [
-        {
-          src: "/assets/romantik/orchestra-bg.jpg",
-          alt: "Orkestra arka planı",
-        },
-      ],
-    },
-    {
       type: "youtube",
-      heading: "Performans İncelemesi (YouTube)",
+      heading: "İkonik Bir Performans: Liszt",
       description:
-        "Sınıfta tartışma için seçili bir canlı performansı buradan açıp kısa analiz yapabilirsiniz.",
-      embedUrl: "https://www.youtube.com/embed/9E6b3swbnWg",
+        "Romantik dönemin 'rock starı' Liszt'in teknik dehasını ve duygusal derinliğini bu performansta görebiliriz.",
+      embedUrl: "https://www.youtube.com/watch?v=H1Dvg2MxQn8",
       callout:
-        "Öneri: İlk 90 saniyede tempo, rubato ve dinamik geçişleri birlikte dinleyin.",
-    },
-    {
-      type: "carousel",
-      heading: "Eser Rotası: 5 Hızlı Durak",
-      intro: "Her slaytta tek bir ikonik eser ve dinleme anahtarı var.",
-      slides: [
-        {
-          title: "Chopin - Nocturne Op.9 No.2",
-          description: "Rubato hissi ve melodik zarafet.",
-          image: "/assets/romantik/works/chopin-nocturne.jpg",
-          tag: "Piyano",
-        },
-        {
-          title: "Liszt - Hungarian Rhapsody No.2",
-          description: "Virtüözite ve dramatik hız değişimleri.",
-          video: "/assets/romantik/works/liszt-rhapsody.mp4",
-          poster: "/assets/romantik/works/liszt-rhapsody-poster.jpg",
-          tag: "Teknik Gösteri",
-        },
-        {
-          title: "Wagner - Ride of the Valkyries",
-          description: "Leitmotif ve güçlü orkestral yapı.",
-          image: "/assets/romantik/works/wagner-valkyrie.jpg",
-          tag: "Opera",
-        },
-        {
-          title: "Tchaikovsky - Swan Lake",
-          description: "Bale ve romantik melodinin birleşimi.",
-          video: "/assets/romantik/works/swan-lake.mp4",
-          poster: "/assets/romantik/works/swan-lake-poster.jpg",
-          tag: "Bale",
-        },
-        {
-          title: "Berlioz - Symphonie fantastique",
-          description: "Program müziğinin erken başyapıtı.",
-          image: "/assets/romantik/works/berlioz-fantastique.jpg",
-          tag: "Program Müziği",
-        },
-      ],
+        "Dinlerken: Piyano üzerindeki el hareketlerine ve dinamik değişimlere dikkat edin.",
     },
     {
       type: "quote",
@@ -339,9 +244,9 @@ const romanticPeriodConfig: PageConfig = {
       },
       {
         speakerId: "uwayss",
-        section: "Program Müziği",
+        section: "Liszt ve Dramatik Etki",
         duration: "1:40",
-        text: "Program müziği, yani müzikle bir hikâye veya fikir anlatma yaklaşımı romantik dönemde büyük ivme kazanıyor. Liszt'in senfonik şiirleri bu konuda çok etkili. Berlioz da Symphonie fantastique ile bir anlatı kurgusunu orkestral yapıya taşıyor. Böylece müzik, sadece soyut bir form değil, aynı zamanda anlatı taşıyan bir sanat haline geliyor.",
+        text: "Piyano tarafında Liszt'in etkisi çok büyük. O, piyanoyu adeta bir orkestra gibi kullanıyor. La Campanella çalışmasında teknik zorlukların ötesinde bir tını zenginliği görüyoruz. Bu eserler sadece yetenek göstermek için değil, enstrümanın sınırlarını zorlayarak yeni bir anlatım kurmak için yazılmış.",
       },
       {
         speakerId: "ulas",
@@ -363,9 +268,9 @@ const romanticPeriodConfig: PageConfig = {
       },
       {
         speakerId: "uwayss",
-        section: "Eser Rotası 3",
+        section: "Romantizmin Özeti",
         duration: "1:30",
-        text: "Berlioz'un Symphonie fantastique eseri, program müziğinin erken ve etkili örneklerinden biri. Besteci eserde bir hikâye örgüsü kuruyor ve orkestrayı adeta bir anlatıcı gibi kullanıyor. Bu yaklaşım, daha sonra sinema müziğine kadar uzanan çok geniş bir etki alanı oluşturuyor.",
+        text: "Toparlarsak, Romantik Dönem aslında bir denge değil, bir tutku dönemidir. Chopin'den Tchaikovsky'ye kadar her besteci bu tutkuyu kendi diline dökmüştür. Bu müzik, dinleyiciyi sadece duymaya değil, hissetmeye davet eder.",
       },
       {
         speakerId: "ulas",
