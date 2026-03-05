@@ -22,9 +22,8 @@ const romanticPeriodConfig: PageConfig = {
     {
       type: "ambientAudio",
       heading: "Arka Plan Atmosferi",
-      description:
-        "Sunum boyunca düşük seviyede romantik dönem piyano atmosferi kullanıyoruz. Ses seviyesini salona göre ayarlayabilirsiniz.",
-      trackTitle: "Nocturne Atmosphere (Placeholder)",
+      description:"",
+      trackTitle: "Nocturne Atmosphere",
       audioUrl: "/assets/romantik/audio/nocturne-loop.mp3",
       loop: true,
     },
@@ -171,7 +170,7 @@ const romanticPeriodConfig: PageConfig = {
     {
       type: "closing",
       heading: "Teşekkürler 🎼",
-      body: "Sorularınızı alalım: Romantik dönemden hangi eseri birlikte analiz edelim?",
+      body: "",
       imageLayers: [
         {
           src: "/assets/romantik/closing-stage.jpg",
@@ -189,7 +188,7 @@ const romanticPeriodConfig: PageConfig = {
         },
         {
           role: "Medya",
-          names: ["Yer tutucu görseller/video/ses (değiştirilecek)"],
+          names: ["Pixabay ve ChatGPT"],
         },
       ],
     },
