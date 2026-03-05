@@ -17,7 +17,7 @@ export const YoutubeSection = ({ content }: YoutubeSectionProps) => {
       <div className="youtube__frame-wrap">
         <iframe
           className="youtube__frame"
-          src={content.embedUrl}
+          src={content.embedUrl.replace('watch?v=', 'embed/')}
           title={content.heading}
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
