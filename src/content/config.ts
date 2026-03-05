@@ -1,260 +1,392 @@
-import type { PageConfig } from '../types/content';
+import type { PageConfig } from "../types/content";
 
-const exampleConfig: PageConfig = {
+const romanticPeriodConfig: PageConfig = {
   sections: [
     {
-      type: 'hero',
-      title: 'Hristiyanlık Dini',
-      subtitle: 'Muhammed Antar & Youssef Awal',
+      type: "hero",
+      title: "Müzikte Romantik Dönem",
+      subtitle: "Ali • Muhammed • Uwayss • Ulaş",
       description:
-        'Günümüzde en fazla mensubu bulunan dinlerden biri olan Hristiyanlık, Hz. İsa\'nın öğretileri ve hayatı etrafında şekillenmiş semavi bir dindir[19].',
-      ctas: [],
+        "Duygunun, hayal gücünün ve dev orkestraların yüzyılı: 19. yüzyıl Avrupa müziğine kısa ama etkileyici bir yolculuk.",
+      ctas: [
+        { label: "Sunuma Başla", href: "#romantik-baslangic" },
+        { label: "Transcript Sayfası", href: "/transcript" },
+      ],
       background: {
-        video: '/assets/hristiyanlik-intro.mp4',
-        overlayColor: '#000000',
-        overlayOpacity: 0.6,
+        video: "/assets/romantik/hero-orchestra.mp4",
+        poster: "/assets/romantik/hero-orchestra-poster.jpg",
+        overlayColor: "#05070f",
+        overlayOpacity: 0.62,
       },
     },
     {
-      type: 'parallax',
-      id: 'history',
-      eyebrow: 'Nasıra\'dan Dünyaya',
-      heading: 'Giriş ve Tarihçe',
-      body:
-        'Hz. İsa, Filistin\'in Nasıra kasabasında dünyaya gelmiş ve 30 yaşında peygamber olarak görevlendirilmiştir[22, 24]. Başlangıçta Roma baskısı altında kalan din, 313 Milan Fermanı ile serbest kalmış, 395 yılında Roma\'nın resmi dini olmuştur[51, 52].',
+      type: "ambientAudio",
+      heading: "Arka Plan Atmosferi",
+      description:
+        "Sunum boyunca düşük seviyede romantik dönem piyano atmosferi kullanıyoruz. Ses seviyesini salona göre ayarlayabilirsiniz.",
+      trackTitle: "Nocturne Atmosphere (Placeholder)",
+      audioUrl: "/assets/romantik/audio/nocturne-loop.mp3",
+      loop: true,
+    },
+    {
+      type: "parallax",
+      id: "romantik-baslangic",
+      eyebrow: "Tarihsel Çerçeve",
+      heading: "Romantik Dönem Ne Zaman?",
+      body: "Yaklaşık 1820-1910 arasında, müzikte bireysel ifade ve yoğun duygu öne çıktı. Sanayileşme, milliyetçilik ve edebiyat akımları bestecilerin dilini doğrudan etkiledi.",
       imageLayers: [
         {
-          src: '/assets/antik.jpg',
-          alt: 'Historical map or Jerusalem footage',
+          video: "/assets/romantik/timeline-smoke.mp4",
+          poster: "/assets/romantik/timeline-smoke-poster.jpg",
+          alt: "Romantik dönem atmosfer görüntüsü",
         },
       ],
       factoids: [
-        { label: 'Köken', value: 'Hz. İsa (Hristos) [20]' },
-        { label: 'Kutsal Kitap', value: 'Kitab-ı Mukaddes [100]' },
-        { label: 'Merkez', value: 'Kudüs & Vatikan [120, 121]' },
+        { label: "Dönem", value: "1820 - 1910" },
+        { label: "Odak", value: "Duygu & Hayal Gücü" },
+        { label: "Kırılma", value: "Program Müziği" },
       ],
     },
     {
-      type: 'carousel',
-      heading: 'Semboller ve Mekanlar',
-      intro: 'Hristiyanlıkta öne çıkan kutsal ögeler',
-      slides: [
+      type: "composerSpotlight",
+      heading: "Dönemin Öne Çıkan Bestecileri",
+      description:
+        "Farklı ülkelerden gelen besteciler, romantik dönemin farklı yüzlerini temsil ediyor.",
+      composers: [
         {
-          title: 'Haç İşareti',
-          image: '/assets/cross.png',
-          description: 'Hz. İsa\'nın çarmıha gerilişini sembolize eder, en temel işarettir[123].',
-          tag: 'Sembol',
+          name: "Frédéric Chopin",
+          years: "1810 - 1849",
+          region: "Polonya / Fransa",
+          signatureWork: "Nocturne Op. 9 No. 2",
+          portrait: "/assets/romantik/composers/chopin.jpg",
         },
         {
-          title: 'Kiliseler',
-          description: 'Ayinlerin yapıldığı, çan ile davet edilen ibadet yerleridir[116, 125].',
-          video: '/assets/klise-drone.mp4',
-          tag: 'Mabet',
+          name: "Franz Liszt",
+          years: "1811 - 1886",
+          region: "Macaristan",
+          signatureWork: "Hungarian Rhapsody No. 2",
+          portrait: "/assets/romantik/composers/liszt.jpg",
         },
         {
-          title: 'İncil (Ahd-i Cedit)',
-          description: 'Matta, Markos, Luka ve Yuhanna İncilleri kutsal kabul edilir[101].',
-          video: '/assets/bible-close-up.mp4',
-          tag: 'Kitap',
+          name: "Richard Wagner",
+          years: "1813 - 1883",
+          region: "Almanya",
+          signatureWork: "Tristan und Isolde",
+          portrait: "/assets/romantik/composers/wagner.jpg",
+        },
+        {
+          name: "P. I. Tchaikovsky",
+          years: "1840 - 1893",
+          region: "Rusya",
+          signatureWork: "Swan Lake",
+          portrait: "/assets/romantik/composers/tchaikovsky.jpg",
         },
       ],
     },
     {
-      type: 'parallax',
-      id: 'beliefs',
-      eyebrow: 'İnanç Esasları',
-      heading: 'Üçlü Birlik: Teslis İnancı',
-      body:
-        'Hristiyan inancının temeli "Baba, Oğul ve Kutsal Ruh" üçlemesine dayanır. Baba yaratıcıyı, Oğul Hz. İsa\'yı, Kutsal Ruh ise Tanrı\'nın gücünü temsil eder[79, 87].',
+      type: "splitMedia",
+      heading: "Piyano Romantizmi vs Senfonik Romantizm",
+      description:
+        "Romantik dönemde hem solo piyano hem de dev orkestra dili eşzamanlı büyüdü.",
+      left: {
+        title: "Salon ve Piyano Dünyası",
+        video: "/assets/romantik/split/piano-close.mp4",
+        poster: "/assets/romantik/split/piano-close-poster.jpg",
+      },
+      right: {
+        title: "Konser Salonu ve Orkestra",
+        video: "/assets/romantik/split/orchestra-wide.mp4",
+        poster: "/assets/romantik/split/orchestra-wide-poster.jpg",
+      },
+      takeaway:
+        "Küçük bir piyano parçası da, yüz kişilik orkestra da aynı dönemin duygusal dilini taşır.",
+    },
+    {
+      type: "gallery",
+      heading: "Romantik Dönem Görsel Panosu",
+      description:
+        "Mekân, kostüm, partisyon ve sahne estetiğini tek bakışta gören bir medya kolajı.",
+      items: [
+        {
+          kind: "image",
+          src: "/assets/romantik/gallery/salon-1.jpg",
+          alt: "19. yüzyıl salonu",
+          caption: "Paris salon kültürü",
+        },
+        {
+          kind: "video",
+          src: "/assets/romantik/gallery/conductor.mp4",
+          poster: "/assets/romantik/gallery/conductor-poster.jpg",
+          alt: "Orkestra şefi",
+          caption: "Dev orkestra yönetimi",
+        },
+        {
+          kind: "image",
+          src: "/assets/romantik/gallery/score.jpg",
+          alt: "El yazması nota",
+          caption: "El yazması partisyonlar",
+        },
+        {
+          kind: "image",
+          src: "/assets/romantik/gallery/opera-stage.jpg",
+          alt: "Opera sahnesi",
+          caption: "Wagner sonrası sahne tasarımı",
+        },
+        {
+          kind: "video",
+          src: "/assets/romantik/gallery/piano-hands.mp4",
+          poster: "/assets/romantik/gallery/piano-hands-poster.jpg",
+          alt: "Piyano çalan eller",
+          caption: "Virtüöz teknik",
+        },
+      ],
+    },
+    {
+      type: "timeline",
+      heading: "Romantik Dönemin Dönüm Noktaları",
+      description:
+        "Ana tarih çizgisi: biçimden duygunun mutlak üstünlüğüne geçiş.",
       imageLayers: [
         {
-          src: '/assets/teslis.png',
-          alt: 'Trinity symbolism',
+          src: "/assets/romantik/timeline-bg.jpg",
+          alt: "Romantik dönem zaman çizgisi arka planı",
         },
       ],
-      factoids: [
-        { label: 'Baba', value: 'Yaratıcı İlah [80]' },
-        { label: 'Oğul', value: 'Hz. İsa (Kurtarıcı) [81]' },
-        { label: 'Amaç', value: 'Asli günahtan kurtuluş [84]' },
-      ],
-    },
-    {
-      type: 'parallax',
-      id: 'rituals',
-      eyebrow: 'İbadetler',
-      heading: 'Sakramentler ve Ritüeller',
-      body:
-        'Kiliselerde yapılan ayinlere Sakrament denir. En önemlisi, kişinin asli günahtan arınması için yapılan Vaftiz törenidir[131, 134].',
-      imageLayers: [
-        {
-          video: '/assets/vaftiz.mp4',
-          alt: 'Church rituals',
-          speed: 10,
-        },
-      ],
-      factoids: [
-        { label: 'Vaftiz', value: 'Kutsal su ile arınma [134]' },
-        { label: 'Evharistiya', value: 'Ekmek-Şarap ayini [141]' },
-        { label: 'Gün', value: 'Pazar günleri [106]' },
-      ],
-    },
-    {
-      type: 'timeline',
-      heading: 'Hristiyanlığın Tarihsel Yolculuğu',
-      description: 'Filistin\'den dünyaya yayılan bu inancın dönüm noktaları.',
-      imageLayers: [
-        {
-          src: '/assets/luther.png',
-          alt: 'Timeline',
-        },
-      ],
-      entriesOpacity: 0.7,
+      entriesOpacity: 0.78,
       entries: [
         {
-          year: 'MS 30 civarı',
-          title: 'Tebliğ Dönemi',
-          description: 'Hz. İsa, 30 yaşında peygamber olarak görevlendirildi ve tebliğe başladı[24].',
+          year: "1820",
+          title: "Erken Romantik Başlangıç",
+          description:
+            "Beethoven sonrası kuşak, klasik formu genişletip daha kişisel bir dil kurdu.",
         },
         {
-          year: '313',
-          title: 'Milan Fermanı',
-          description: 'İmparator Konstantin, Hristiyanlığı koruma altına aldı[51].',
+          year: "1830-1848",
+          title: "Piyano Çağı",
+          description:
+            "Chopin ve Liszt, piyano repertuvarını teknik ve duygusal olarak dönüştürdü.",
         },
         {
-          year: '325',
-          title: 'İznik Konsili',
-          description: 'Temel inanç esasları belirlendi ve 4 İncil kabul edildi[72, 74].',
+          year: "1850-1870",
+          title: "Program Müziği ve Senfonik Şiir",
+          description:
+            "Liszt ile tek bölümlü anlatısal orkestral eserler yaygınlaştı.",
         },
         {
-          year: '1054',
-          title: 'Büyük Bölünme',
-          description: 'Roma (Katolik) ve İstanbul (Ortodoks) kiliseleri birbirinden ayrıldı[76].',
+          year: "1865",
+          title: "Wagner Etkisi",
+          description:
+            "Tristan und Isolde ile armonik gerilim, modern müziğe kapı araladı.",
         },
         {
-          year: '16. Yüzyıl',
-          title: 'Reform',
-          description: 'Martin Luther öncülüğünde Protestanlık mezhebi doğdu[167].',
+          year: "1890-1910",
+          title: "Geç Romantik Eşik",
+          description:
+            "Mahler ve Rachmaninov ile romantik dil modernizme doğru taşındı.",
         },
       ],
     },
     {
-      type: 'quote',
+      type: "media",
+      heading: "Orkestradaki Ses Patlaması",
+      description:
+        "Geniş dinamik aralık ve yoğun orkestrasyon romantik dönemin en güçlü işitsel imzasıdır.",
+      videoUrl: "/assets/romantik/orchestra-impact.mp4",
+      posterUrl: "/assets/romantik/orchestra-impact-poster.jpg",
+      callout:
+        "Kritik not: ppp den fff ye çıkan dramatik geçişler bu dönemde belirginleşir.",
+      imageLayers: [
+        {
+          src: "/assets/romantik/orchestra-bg.jpg",
+          alt: "Orkestra arka planı",
+        },
+      ],
+    },
+    {
+      type: "youtube",
+      heading: "Performans İncelemesi (YouTube)",
+      description:
+        "Sınıfta tartışma için seçili bir canlı performansı buradan açıp kısa analiz yapabilirsiniz.",
+      embedUrl: "https://www.youtube.com/embed/9E6b3swbnWg",
+      callout:
+        "Öneri: İlk 90 saniyede tempo, rubato ve dinamik geçişleri birlikte dinleyin.",
+    },
+    {
+      type: "carousel",
+      heading: "Eser Rotası: 5 Hızlı Durak",
+      intro: "Her slaytta tek bir ikonik eser ve dinleme anahtarı var.",
+      slides: [
+        {
+          title: "Chopin - Nocturne Op.9 No.2",
+          description: "Rubato hissi ve melodik zarafet.",
+          image: "/assets/romantik/works/chopin-nocturne.jpg",
+          tag: "Piyano",
+        },
+        {
+          title: "Liszt - Hungarian Rhapsody No.2",
+          description: "Virtüözite ve dramatik hız değişimleri.",
+          video: "/assets/romantik/works/liszt-rhapsody.mp4",
+          poster: "/assets/romantik/works/liszt-rhapsody-poster.jpg",
+          tag: "Teknik Gösteri",
+        },
+        {
+          title: "Wagner - Ride of the Valkyries",
+          description: "Leitmotif ve güçlü orkestral yapı.",
+          image: "/assets/romantik/works/wagner-valkyrie.jpg",
+          tag: "Opera",
+        },
+        {
+          title: "Tchaikovsky - Swan Lake",
+          description: "Bale ve romantik melodinin birleşimi.",
+          video: "/assets/romantik/works/swan-lake.mp4",
+          poster: "/assets/romantik/works/swan-lake-poster.jpg",
+          tag: "Bale",
+        },
+        {
+          title: "Berlioz - Symphonie fantastique",
+          description: "Program müziğinin erken başyapıtı.",
+          image: "/assets/romantik/works/berlioz-fantastique.jpg",
+          tag: "Program Müziği",
+        },
+      ],
+    },
+    {
+      type: "quote",
       quote:
-        'Ben Tanrı\'ya, kudretli Baba\'ya ve onun biricik oğlu Rab İsa\'ya... ve Kutsal Ruh\'a inanırım.',
-      speaker: 'Havariler Akidesi',
-      context: 'Hristiyanlığın İnanç Esasları [88]',
+        "Müziğin görevi, sözcüklerin bittiği yerde insanın iç dünyasını konuşulur kılmaktır.",
+      speaker: "Romantik dönem estetiği özeti",
+      context: "Dönemin ortak ruhu",
       imageLayers: [
         {
-          src: '/assets/havariler.png',
-          alt: 'Quote',
+          src: "/assets/romantik/quote-bg.jpg",
+          alt: "Romantik dönem dokusu",
         },
       ],
     },
     {
-      type: 'media',
-      heading: 'Hristiyanlık Mezhepleri',
+      type: "closing",
+      heading: "Teşekkürler 🎼",
+      body: "Sorularınızı alalım: Romantik dönemden hangi eseri birlikte analiz edelim?",
       imageLayers: [
         {
-          src: '/assets/mezhepler.png',
-          alt: 'Quote',
-        },
-      ],
-      callout: 'Dünya geneli dağılım ve çeşitlilik',
-    },
-    {
-      type: 'parallax',
-      id: 'catholic',
-      eyebrow: 'Mezhepler',
-      heading: 'Katolik Kilisesi',
-      body:
-        'Hristiyanlığın en büyük mezhebi olan Katoliklik, merkezi bir yapıya sahiptir. Vatikan merkezli bu inancın lideri Papa\'dır. Geleneklere, sakramentlere ve Meryem Ana\'ya verilen önem belirgindir[76, 120].',
-      imageLayers: [
-        {
-          src: '/assets/catholic.png',
-          alt: 'Vatikan ve Katolik Sanatı',
-        },
-      ],
-      factoids: [
-        { label: 'Merkez', value: 'Vatikan (Roma) [120]' },
-        { label: 'Lider', value: 'Papa [121]' },
-        { label: 'Mensup', value: '1.3 Milyar+' },
-      ],
-    },
-    {
-      type: 'parallax',
-      id: 'orthodox',
-      eyebrow: 'Mezhepler',
-      heading: 'Ortodoks Kilisesi',
-      body:
-        '1054 yılında Roma\'dan ayrılan Doğu kiliselerini temsil eder. İkonlara büyük önem verilir ve ayinler mistik bir hava taşır. Her milletin kendi milli kilisesi (Yunan, Rus vb.) bulunsa da manevi liderlik İstanbul Ekümenik Patrikhanesi\'ndedir[76].',
-      imageLayers: [
-        {
-          src: '/assets/orthodox.png',
-          alt: 'Ortodoks Kilisesi ve İkonlar',
-        },
-      ],
-      factoids: [
-        { label: 'Merkez', value: 'İstanbul / Moskova [76]' },
-        { label: 'Lider', value: 'Patrik' },
-        { label: 'Özellik', value: 'İkonografi ve Gelenek' },
-      ],
-    },
-    {
-      type: 'parallax',
-      id: 'protestant',
-      eyebrow: 'Mezhepler',
-      heading: 'Protestanlık',
-      body:
-        '16. yüzyılda Martin Luther\'in Katolik Kilisesi\'ne yönelik eleştirileriyle doğmuştur. Sadece İncil\'i (Sola Scriptura) ve imanı temel alır. Merkezi bir ruhani liderlik yoktur; birçok farklı alt gruba (Anglikan, Baptist vb.) ayrılır[167].',
-      imageLayers: [
-        {
-          src: '/assets/luther.png',
-          alt: 'Martin Luther ve Reform',
-        },
-      ],
-      factoids: [
-        { label: 'Köken', value: '16. YY Reform [167]' },
-        { label: 'Esas', value: 'Sola Scriptura (Yalnız Kitap)' },
-        { label: 'Yapı', value: 'Merkezi Olmayan' },
-      ],
-    },
-    {
-      type: 'closing',
-      heading: 'Dinlediğiniz için teşekkür ederiz 🙏',
-      body: 'Sorularınız varsa memnuniyetle cevaplayabiliriz.',
-      imageLayers: [
-        {
-          src: '/assets/closing.jpg',
-          alt: 'Quote',
+          src: "/assets/romantik/closing-stage.jpg",
+          alt: "Kapanış sahnesi",
         },
       ],
       credits: [
         {
-          role: 'Proje Hazırlama',
-          names: ['Uwayss Antar', 'Youssef Awal'],
+          role: "Anlatım",
+          names: ["Ali", "Muhammed", "Uwayss", "Ulaş"],
         },
         {
-          role: 'Araştırma',
-          names: ['Youssef Awal'],
+          role: "İçerik Kapsamı",
+          names: ["Romantik Dönem", "Besteciler", "Eser Analizi"],
         },
         {
-          role: 'Tasarım ve Geliştirme',
-          names: ['Uwayss Antar'],
-        },
-        {
-          role: 'Kaynaklar',
-          names: ['Vikipedi',
-             'TDV İslâm Ansiklopedisi', 
-             'MEB Kitabı'
-          ],
-        },
-        {
-          role: 'Özel Teşekkür',
-          names: ['Birsen hocamiz ve tum dinleyenler'],
+          role: "Medya",
+          names: ["Yer tutucu görseller/video/ses (değiştirilecek)"],
         },
       ],
     },
   ],
+  transcript: {
+    title: "Müzikte Romantik Dönem - Tam Konuşma Metni",
+    subtitle:
+      "Bu sayfa, 20 dakikalık sunum sırasında ekip üyelerinin söyleyeceği metnin tam halidir.",
+    totalDuration: "20:00",
+    speakers: [
+      { id: "ali", name: "Ali", color: "#f59e0b" },
+      { id: "muhammed", name: "Muhammed", color: "#38bdf8" },
+      { id: "uwayss", name: "Uwayss", color: "#a78bfa" },
+      { id: "ulas", name: "Ulaş", color: "#34d399" },
+    ],
+    segments: [
+      {
+        speakerId: "ali",
+        section: "Giriş",
+        duration: "1:30",
+        text: "Herkese merhaba. Bugün sizlere müzik tarihinde çok önemli bir kırılma noktası olan Romantik Dönem'i anlatacağız. Klasik dönemde denge ve biçim daha öndeyken, romantik dönemde duygu, bireysel ifade ve hayal gücü merkezde yer alıyor. Sunum boyunca dönemin temel özelliklerini, önemli bestecilerini ve ikonik eserlerini kısa ama etkili örneklerle birlikte ele alacağız.",
+      },
+      {
+        speakerId: "muhammed",
+        section: "Tarihsel Çerçeve",
+        duration: "1:40",
+        text: "Romantik dönemi kabaca 19. yüzyıl boyunca düşünebiliriz. Bu dönem Avrupa'da toplumsal dönüşümlerin çok hızlandığı bir zaman. Sanayileşme, şehirleşme, milliyetçilik akımları ve edebiyat hareketleri müziği doğrudan etkiliyor. Besteciler artık sadece saraya değil, daha geniş konser salonu kitlesine de üretim yapıyor. Bu da hem formu hem de anlatım dilini değiştiriyor.",
+      },
+      {
+        speakerId: "uwayss",
+        section: "Dönem Özellikleri",
+        duration: "1:50",
+        text: "Romantik dönemin müzikteki en belirgin özellikleri: daha uzun ve şarkısal melodiler, daha cesur armoni kullanımı, çok geniş dinamik aralık, orkestranın büyümesi ve program müziğinin yaygınlaşması. Yani müzik artık yalnızca biçimsel bir yapı değil; bir hikâye, bir manzara, bir karakter ya da bir psikolojik durum da anlatabiliyor.",
+      },
+      {
+        speakerId: "ulas",
+        section: "Besteci Portreleri",
+        duration: "2:00",
+        text: "Bu dönemde her besteci romantizmi farklı yorumluyor. Chopin, piyanoda içe dönük ve şiirsel bir dünya kuruyor. Liszt, virtüöziteyi neredeyse sahne gösterisine dönüştürüyor. Wagner, operayı dramatik bütünlük içinde yeniden tanımlıyor. Tchaikovsky ise yoğun melodi gücüyle senfoni ve bale repertuvarında çok güçlü bir etki bırakıyor.",
+      },
+      {
+        speakerId: "ali",
+        section: "Piyano ve Salon Kültürü",
+        duration: "1:40",
+        text: "Romantik dönemde piyano çok merkezi bir enstrüman haline geliyor. Özellikle salon konserlerinde besteciler daha kişisel, daha kırılgan, daha lirizm odaklı eserler üretiyor. Chopin'in nocturne'leri bunun en iyi örneklerinden biri. Teknik açıdan zor ama dinleyici tarafında çok duygusal bir etki bırakan bir dil görüyoruz.",
+      },
+      {
+        speakerId: "muhammed",
+        section: "Orkestra ve Dev Ses",
+        duration: "1:40",
+        text: "Aynı dönemde orkestralar hem büyüyor hem de renkleniyor. Üflemeli ve vurmalı kullanımı artıyor. Dinamik aralık çok genişliyor: çok sakin bir pasajdan bir anda patlayıcı bir zirveye çıkılabiliyor. Bu yüzden romantik dönemi dinlerken bir film müziği hissi almak çok normal; dramatik geçişler çok güçlü.",
+      },
+      {
+        speakerId: "uwayss",
+        section: "Program Müziği",
+        duration: "1:40",
+        text: "Program müziği, yani müzikle bir hikâye veya fikir anlatma yaklaşımı romantik dönemde büyük ivme kazanıyor. Liszt'in senfonik şiirleri bu konuda çok etkili. Berlioz da Symphonie fantastique ile bir anlatı kurgusunu orkestral yapıya taşıyor. Böylece müzik, sadece soyut bir form değil, aynı zamanda anlatı taşıyan bir sanat haline geliyor.",
+      },
+      {
+        speakerId: "ulas",
+        section: "Wagner ve Etki Alanı",
+        duration: "1:40",
+        text: "Wagner'in etkisi özellikle opera tarafında çok büyük. Leitmotif tekniğiyle karakterleri, fikirleri ve sahneleri belirli müzik motifleriyle eşleştiriyor. Ayrıca Tristan und Isolde gibi eserlerde armonik gerilim çok ileri bir noktaya taşınıyor. Bu, 20. yüzyıl müziğine geçişte önemli bir köprü oluşturuyor.",
+      },
+      {
+        speakerId: "ali",
+        section: "Eser Rotası 1",
+        duration: "1:35",
+        text: "Şimdi kısa eser rotasına geçiyoruz. Chopin'in Nocturne Op.9 No.2 eserinde rubato kullanımına dikkat edin: tempo tam sabit değil ama ifade çok doğal akıyor. Liszt'in Hungarian Rhapsody'sinde ise teknik parlaklık ve ani karakter değişimleri ön planda. İki eser de romantik dönemin farklı yüzlerini gösteriyor.",
+      },
+      {
+        speakerId: "muhammed",
+        section: "Eser Rotası 2",
+        duration: "1:35",
+        text: "Wagner tarafında Ride of the Valkyries güçlü orkestral enerji ve motif kullanımını net biçimde gösteriyor. Tchaikovsky'de ise Swan Lake, hem sahne hem müzik anlatısını birlikte yükseltiyor. Bale müziğinin bu kadar kalıcı olmasının nedeni, melodik hafızasının çok güçlü olması ve dramatik akışın netliği.",
+      },
+      {
+        speakerId: "uwayss",
+        section: "Eser Rotası 3",
+        duration: "1:30",
+        text: "Berlioz'un Symphonie fantastique eseri, program müziğinin erken ve etkili örneklerinden biri. Besteci eserde bir hikâye örgüsü kuruyor ve orkestrayı adeta bir anlatıcı gibi kullanıyor. Bu yaklaşım, daha sonra sinema müziğine kadar uzanan çok geniş bir etki alanı oluşturuyor.",
+      },
+      {
+        speakerId: "ulas",
+        section: "Dönemin Mirası",
+        duration: "1:35",
+        text: "Romantik dönem, modern müziğin kapısını aralayan bir dönem. Geç romantik bestecilerde tonallik sınırlarının zorlandığını görüyoruz. Mahler, Strauss ve Rachmaninov gibi isimler bu eşiği farklı yönlere taşıyor. Kısaca romantik dönem, hem duygusal yoğunluk hem de teknik yenilik bakımından kalıcı bir miras bırakıyor.",
+      },
+      {
+        speakerId: "ali",
+        section: "Kapanış",
+        duration: "1:25",
+        text: "Toparlarsak: romantik dönem, müzikte bireysel anlatımı güçlendirdi, orkestrayı büyüttü, yeni türleri öne çıkardı ve dinleyiciyle duygusal bağı derinleştirdi. Bugün hâlâ konser programlarında en çok yer alan repertuvarın büyük bölümü bu dönemin üretimlerinden geliyor.",
+      },
+      {
+        speakerId: "muhammed",
+        section: "Soruya Geçiş",
+        duration: "0:55",
+        text: "Dinlediğiniz için teşekkür ederiz. Eğer isterseniz kısa bir dinleme analizi yapabiliriz: seçtiğimiz performansta tempo, dinamizm ve ifade açısından hangi romantik özellikleri duyduğunuzu birlikte konuşabiliriz.",
+      },
+    ],
+  },
 };
 
-export default exampleConfig;
+export default romanticPeriodConfig;
