@@ -5,7 +5,7 @@ const romanticPeriodConfig: PageConfig = {
     {
       type: "hero",
       title: "Müzikte Romantik Dönem",
-      subtitle: "Ali • Muhammed • Uwayss • Ulaş",
+      subtitle: "Ali • Muhammed • Uwayss • Ulaş • Hakim",
       description:
         "Duygunun, hayal gücünün ve dev orkestraların yüzyılı: 19. yüzyıl Avrupa müziğine kısa ama etkileyici bir yolculuk.",
       ctas: [
@@ -181,7 +181,7 @@ const romanticPeriodConfig: PageConfig = {
       credits: [
         {
           role: "Anlatım",
-          names: ["Ali", "Muhammed", "Uwayss", "Ulaş"],
+          names: ["Ali", "Muhammed", "Uwayss", "Ulaş", "Hakim"],
         },
         {
           role: "İçerik Kapsamı",
@@ -204,6 +204,7 @@ const romanticPeriodConfig: PageConfig = {
       { id: "muhammed", name: "Muhammed", color: "#38bdf8" },
       { id: "uwayss", name: "Uwayss", color: "#a78bfa" },
       { id: "ulas", name: "Ulaş", color: "#34d399" },
+      { id: "hakim", name: "Hakim", color: "#f43f5e" },
     ],
     segments: [
       {
@@ -219,7 +220,7 @@ const romanticPeriodConfig: PageConfig = {
         text: "Romantik dönemi kabaca 19. yüzyıl boyunca düşünebiliriz. Bu dönem Avrupa'da toplumsal dönüşümlerin çok hızlandığı bir zaman. Sanayileşme, şehirleşme, milliyetçilik akımları ve edebiyat hareketleri müziği doğrudan etkiliyor. Besteciler artık sadece saraya değil, daha geniş konser salonu kitlesine de üretim yapıyor. Bu da hem formu hem de anlatım dilini değiştiriyor.",
       },
       {
-        speakerId: "uwayss",
+        speakerId: "hakim",
         section: "Dönem Özellikleri",
         duration: "1:50",
         text: "Romantik dönemin müzikteki en belirgin özellikleri: daha uzun ve şarkısal melodiler, daha cesur armoni kullanımı, çok geniş dinamik aralık, orkestranın büyümesi ve program müziğinin yaygınlaşması. Yani müzik artık yalnızca biçimsel bir yapı değil; bir hikâye, bir manzara, bir karakter ya da bir psikolojik durum da anlatabiliyor.",
@@ -237,7 +238,7 @@ const romanticPeriodConfig: PageConfig = {
         text: "Romantik dönemde piyano çok merkezi bir enstrüman haline geliyor. Özellikle salon konserlerinde besteciler daha kişisel, daha kırılgan, daha lirizm odaklı eserler üretiyor. Chopin'in nocturne'leri bunun en iyi örneklerinden biri. Teknik açıdan zor ama dinleyici tarafında çok duygusal bir etki bırakan bir dil görüyoruz.",
       },
       {
-        speakerId: "muhammed",
+        speakerId: "hakim",
         section: "Orkestra ve Dev Ses",
         duration: "1:40",
         text: "Aynı dönemde orkestralar hem büyüyor hem de renkleniyor. Üflemeli ve vurmalı kullanımı artıyor. Dinamik aralık çok genişliyor: çok sakin bir pasajdan bir anda patlayıcı bir zirveye çıkılabiliyor. Bu yüzden romantik dönemi dinlerken bir film müziği hissi almak çok normal; dramatik geçişler çok güçlü.",
@@ -261,7 +262,7 @@ const romanticPeriodConfig: PageConfig = {
         text: "Şimdi kısa eser rotasına geçiyoruz. Chopin'in Nocturne Op.9 No.2 eserinde rubato kullanımına dikkat edin: tempo tam sabit değil ama ifade çok doğal akıyor. Liszt'in Hungarian Rhapsody'sinde ise teknik parlaklık ve ani karakter değişimleri ön planda. İki eser de romantik dönemin farklı yüzlerini gösteriyor.",
       },
       {
-        speakerId: "muhammed",
+        speakerId: "hakim",
         section: "Eser Rotası 2",
         duration: "1:35",
         text: "Wagner tarafında Ride of the Valkyries güçlü orkestral enerji ve motif kullanımını net biçimde gösteriyor. Tchaikovsky'de ise Swan Lake, hem sahne hem müzik anlatısını birlikte yükseltiyor. Bale müziğinin bu kadar kalıcı olmasının nedeni, melodik hafızasının çok güçlü olması ve dramatik akışın netliği.",
@@ -273,7 +274,7 @@ const romanticPeriodConfig: PageConfig = {
         text: "Toparlarsak, Romantik Dönem aslında bir denge değil, bir tutku dönemidir. Chopin'den Tchaikovsky'ye kadar her besteci bu tutkuyu kendi diline dökmüştür. Bu müzik, dinleyiciyi sadece duymaya değil, hissetmeye davet eder.",
       },
       {
-        speakerId: "ulas",
+        speakerId: "hakim",
         section: "Dönemin Mirası",
         duration: "1:35",
         text: "Romantik dönem, modern müziğin kapısını aralayan bir dönem. Geç romantik bestecilerde tonallik sınırlarının zorlandığını görüyoruz. Mahler, Strauss ve Rachmaninov gibi isimler bu eşiği farklı yönlere taşıyor. Kısaca romantik dönem, hem duygusal yoğunluk hem de teknik yenilik bakımından kalıcı bir miras bırakıyor.",
