@@ -100,6 +100,11 @@ body {
 }
 
 .nav-link.ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+.nav-link.ghost {
   color: var(--text);
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
@@ -822,8 +827,54 @@ button:hover {
 }
 
 .transcript-page {
-  min-height: 100%;
-  padding: clamp(4.8rem, 5vw, 6rem) clamp(1.2rem, 7vw, 7rem) 4rem;
+  min-height: 100vh;
+  padding: clamp(1.5rem, 5vw, 6rem) clamp(1rem, 7vw, 7rem) 4rem;
+  overflow-y: auto !important;
+  scroll-snap-type: none !important;
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+  
+  body {
+    overflow-y: auto !important;
+  }
+
+  .transcript-page {
+    padding: 1rem;
+    padding-top: 4rem;
+  }
+
+  .transcript-page h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.2;
+  }
+
+  .transcript-page p {
+    font-size: 1rem !important;
+  }
+
+  .transcript-segment {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .transcript-segment p {
+    font-size: 1.05rem !important;
+    line-height: 1.6;
+  }
+
+  .transcript-segment__meta {
+    font-size: 0.75rem;
+    gap: 0.4rem;
+  }
+
+  .transcript-speakers__chip {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem !important;
+  }
 }
 
 .transcript-page__header {

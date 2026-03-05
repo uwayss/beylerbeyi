@@ -6,7 +6,7 @@ type TranscriptPageProps = {
 
 export const TranscriptPage = ({ transcript }: TranscriptPageProps) => {
   return (
-    <main className="transcript-page">
+    <main className="transcript-page page">
       <header className="transcript-page__header">
         <p className="eyebrow">Tam Konuşma Metni</p>
         <h1>{transcript.title}</h1>
