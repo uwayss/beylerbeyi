@@ -22,7 +22,7 @@ const romanticPeriodConfig: PageConfig = {
     {
       type: "ambientAudio",
       heading: "Arka Plan Atmosferi",
-      description:"",
+      description: "",
       trackTitle: "Nocturne Atmosphere",
       audioUrl: "/assets/romantik/audio/nocturne-loop.mp3",
       loop: true,
@@ -142,6 +142,55 @@ const romanticPeriodConfig: PageConfig = {
           title: "Geç Romantik Eşik",
           description:
             "Mahler ve Rachmaninov ile romantik dil modernizme doğru taşındı.",
+        },
+      ],
+    },
+    {
+      type: "gallery",
+      heading: "Dönemin Mimari Dokusu",
+      description:
+        "Romantik dönem mimarisi, geçmişin görkemine duyulan özlem (Neogotik, Neoklasik) ve doğayla bütünleşen tasarım anlayışıyla şekillendi.",
+      items: [
+        {
+          src: "/assets/romantik/mimari-1.png",
+          alt: "Neogotik Mimari Örneği",
+          caption: "Neogotik: Orta Çağ'ın dikey hatlarına geri dönüş.",
+          kind: "image",
+        },
+        {
+          src: "/assets/romantik/mimari-2.png",
+          alt: "Romantik Bahçe ve Köşk",
+          caption: "Doğa ile iç içe, asimetrik ve pitoresk yapılar.",
+          kind: "image",
+        },
+      ],
+    },
+    {
+      type: "carousel",
+      heading: "Dönemin Magazinel Olayları",
+      intro:
+        "Müzik dünyasının kurallarını yıkan, aşkları ve kavgalarıyla konuşulan romantik isimler.",
+      slides: [
+        {
+          title: "Lisztomania",
+          description:
+            "Franz Liszt sahneye çıktığında kadınlar bayılır, eldivenlerini kapmak için birbirlerini ezerlerdi. Tarihin ilk rock starı o kabul edilir.",
+          tag: "Fenomen",
+          image: "/assets/romantik/composers/liszt.jpg",
+        },
+        {
+          title: "Chopin ve George Sand",
+          description:
+            "Kırılgan besteci Chopin ile pantolon giyip pipo içen aykırı yazar George Sand'in fırtınalı aşkı, dönemin en çok konuşulan magazin konusuydu.",
+          tag: "Skandal Aşk",
+          image: "/assets/romantik/composers/chopin.jpg",
+        },
+        {
+          title: "Wagner'in Kaçışları",
+          description:
+            "Lüks tutkusu yüzünden sürekli borç içinde yüzen Wagner, alacaklılarından kaçarken bir yandan da devasa operalarını yazardı.",
+          tag: "Yaşam Tarzı",
+          image: "/assets/romantik/composers/wagner.jpg",
         },
       ],
     },
