@@ -268,16 +268,10 @@ const romanticPeriodConfig: PageConfig = {
         text: "Romantik dönemi kabaca 19. yüzyıl boyunca düşünebiliriz. Bu dönem Avrupa'da toplumsal dönüşümlerin çok hızlandığı bir zaman. Sanayileşme, şehirleşme, milliyetçilik akımları ve edebiyat hareketleri müziği doğrudan etkiliyor. Besteciler artık sadece saraya değil, daha geniş konser salonu kitlesine de üretim yapıyor. Bu da hem formu hem de anlatım dilini değiştiriyor.",
       },
       {
-        speakerId: "hakim",
-        section: "Dönem Özellikleri",
-        duration: "1:50",
-        text: "Romantik dönemin müzikteki en belirgin özellikleri: daha uzun ve şarkısal melodiler, daha cesur armoni kullanımı, çok geniş dinamik aralık, orkestranın büyümesi ve program müziğinin yaygınlaşması. Yani müzik artık yalnızca biçimsel bir yapı değil; bir hikâye, bir manzara, bir karakter ya da bir psikolojik durum da anlatabiliyor.",
-      },
-      {
         speakerId: "ulas",
         section: "Besteci Portreleri",
         duration: "2:00",
-        text: "Bu dönemde her besteci romantizmi farklı yorumluyor. Chopin, piyanoda içe dönük ve şiirsel bir dünya kuruyor. Liszt, virtüöziteyi neredeyse sahne gösterisine dönüştürüyor. Wagner, operayı dramatik bütünlük içinde yeniden tanımlıyor. Tchaikovsky ise yoğun melodi gücüyle senfoni ve bale repertuvarında çok güçlü bir etki bırakıyor.",
+        text: "Bu dönemde her besteci romantizmi farklı yorumluyor. Chopin, piyanoda içe dönük ve şiirsel bir world kuruyor. Liszt, virtüöziteyi neredeyse sahne gösterisine dönüştürüyor. Wagner, operayı dramatik bütünlük içinde yeniden tanımlıyor. Tchaikovsky ise yoğun melodi gücüyle senfoni ve bale repertuvarında çok güçlü bir etki bırakıyor.",
       },
       {
         speakerId: "ali",
@@ -293,39 +287,33 @@ const romanticPeriodConfig: PageConfig = {
       },
       {
         speakerId: "uwayss",
-        section: "Liszt ve Dramatik Etki",
+        section: "Dönüm Noktaları",
+        duration: "1:40",
+        text: "Zaman çizgisine baktığımızda, romantik dönemin evrimini net görebiliyoruz. Erken romantiklerden geç romantiğe kadar armoni ve form sürekli genişliyor. Wagner'in Tristan und Isolde'si ile modernliğe kapı aralanıyor, Mahler ve Rachmaninov ile bu dil 20. yüzyıla taşınıyor.",
+      },
+      {
+        speakerId: "ulas",
+        section: "Mimari Dokusu",
+        duration: "1:20",
+        text: "Dönemin mimarisi de bu ruhu yansıtıyor. Neogotik ve Neoklasik etkilerle geçmişin ihtişamına duyulan bir özlem var. Doğa ile iç içe, asimetrik ve pitoresk yapılar, o dönemde gelişen 'uçsuz buçaksızlık' hissini binalara da taşımış. Özellikle neogotik seçkilerdeki dikey hatlar, tıpkı müzikteki yükselişler gibi etkileyici.",
+      },
+      {
+        speakerId: "muhammed",
+        section: "Magazinel Olaylar",
+        duration: "1:30",
+        text: "Tabii bu dönem sadece notalardan ibaret değil, aynı zamanda büyük magazinel olayların da dönemi. Franz Liszt'in 'Lisztomania' etkisi, tarihin ilk rock starı fenomenini yaratmış. Chopin ve George Sand'in fırtınalı aşkı, Wagner'in lüks tutkusu yüzünden alacaklılardan kaçarken devasa operalar yazması gibi olaylar, dönemin insan faktörünü ve tutkusunu en iyi gösteren detaylar.",
+      },
+      {
+        speakerId: "hakim",
+        section: "İkonik Performans",
         duration: "1:40",
         text: "Piyano tarafında Liszt'in etkisi çok büyük. O, piyanoyu adeta bir orkestra gibi kullanıyor. La Campanella çalışmasında teknik zorlukların ötesinde bir tını zenginliği görüyoruz. Bu eserler sadece yetenek göstermek için değil, enstrümanın sınırlarını zorlayarak yeni bir anlatım kurmak için yazılmış.",
       },
       {
-        speakerId: "ulas",
-        section: "Wagner ve Etki Alanı",
-        duration: "1:40",
-        text: "Wagner'in etkisi özellikle opera tarafında çok büyük. Leitmotif tekniğiyle karakterleri, fikirleri ve sahneleri belirli müzik motifleriyle eşleştiriyor. Ayrıca Tristan und Isolde gibi eserlerde armonik gerilim çok ileri bir noktaya taşınıyor. Bu, 20. yüzyıl müziğine geçişte önemli bir köprü oluşturuyor.",
-      },
-      {
-        speakerId: "ali",
-        section: "Eser Rotası 1",
-        duration: "1:35",
-        text: "Şimdi kısa eser rotasına geçiyoruz. Chopin'in Nocturne Op.9 No.2 eserinde rubato kullanımına dikkat edin: tempo tam sabit değil ama ifade çok doğal akıyor. Liszt'in Hungarian Rhapsody'sinde ise teknik parlaklık ve ani karakter değişimleri ön planda. İki eser de romantik dönemin farklı yüzlerini gösteriyor.",
-      },
-      {
-        speakerId: "hakim",
-        section: "Eser Rotası 2",
-        duration: "1:35",
-        text: "Wagner tarafında Ride of the Valkyries güçlü orkestral enerji ve motif kullanımını net biçimde gösteriyor. Tchaikovsky'de ise Swan Lake, hem sahne hem müzik anlatısını birlikte yükseltiyor. Bale müziğinin bu kadar kalıcı olmasının nedeni, melodik hafızasının çok güçlü olması ve dramatik akışın netliği.",
-      },
-      {
         speakerId: "uwayss",
         section: "Romantizmin Özeti",
-        duration: "1:30",
+        duration: "1:10",
         text: "Toparlarsak, Romantik Dönem aslında bir denge değil, bir tutku dönemidir. Chopin'den Tchaikovsky'ye kadar her besteci bu tutkuyu kendi diline dökmüştür. Bu müzik, dinleyiciyi sadece duymaya değil, hissetmeye davet eder.",
-      },
-      {
-        speakerId: "hakim",
-        section: "Dönemin Mirası",
-        duration: "1:35",
-        text: "Romantik dönem, modern müziğin kapısını aralayan bir dönem. Geç romantik bestecilerde tonallik sınırlarının zorlandığını görüyoruz. Mahler, Strauss ve Rachmaninov gibi isimler bu eşiği farklı yönlere taşıyor. Kısaca romantik dönem, hem duygusal yoğunluk hem de teknik yenilik bakımından kalıcı bir miras bırakıyor.",
       },
       {
         speakerId: "ali",

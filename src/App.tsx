@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { content } from './content/sections'
 import { HeroSection } from './components/HeroSection'
 import { AmbientAudioSection } from './components/AmbientAudioSection'
@@ -47,20 +48,30 @@ const SectionRenderer = ({ section }: { section: Section }) => {
 
 function App() {
   const { sections } = content
-  const isTranscriptPage = window.location.pathname === '/transcript'
+  const [showTranscript, setShowTranscript] = useState(false)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [showTranscript])
 
   return (
     <div className="page">
       <nav className="floating-nav">
-        <a href="/" className={isTranscriptPage ? 'nav-link ghost' : 'nav-link'}>
+        <button 
+          onClick={() => setShowTranscript(false)} 
+          className={!showTranscript ? 'nav-link' : 'nav-link ghost'}
+        >
           Sunum
-        </a>
-        <a href="/transcript" className={isTranscriptPage ? 'nav-link' : 'nav-link ghost'}>
+        </button>
+        <button 
+          onClick={() => setShowTranscript(true)} 
+          className={showTranscript ? 'nav-link' : 'nav-link ghost'}
+        >
           Transcript
-        </a>
+        </button>
       </nav>
 
-      {isTranscriptPage ? (
+      {showTranscript ? (
         <TranscriptPage transcript={content.transcript} />
       ) : (
         sections.map((section, index) => (

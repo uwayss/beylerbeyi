@@ -97,6 +97,24 @@ body {
   padding: 0.5rem 0.95rem;
   border-radius: 999px;
   background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+.ghost {
+  background: transparent !important;
+  color: var(--muted) !important;
+  font-weight: 500;
+}
+
+.ghost:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: var(--text) !important;
 }
 
 .nav-link.ghost {
